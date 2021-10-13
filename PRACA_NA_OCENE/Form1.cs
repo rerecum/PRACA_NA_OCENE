@@ -16,5 +16,24 @@ namespace PRACA_NA_OCENE
         {
             InitializeComponent();
         }
+
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        struct Dane
+        {
+            string Imie;
+            string badanie;
+            DateTime Data;
+        }
+        public void WypiszWartosci()
+        {
+            Console.WriteLine("Imie: {0}");
+            Console.WriteLine("badanie: {0}");
+            Console.WriteLine("Data: {0}");
+        }
     }
 }
