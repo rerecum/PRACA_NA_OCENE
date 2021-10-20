@@ -15,8 +15,23 @@ namespace PRACA_NA_OCENE
         public Form1()
         {
             InitializeComponent();
+            SetMyCustomFormat();
         }
 
+        public void SetMyCustomFormat()
+        {
+            DateTime time = DateTime.Now;
+            DateTime day = DateTime.Today;
+            data.Format = DateTimePickerFormat.Custom;
+            data.CustomFormat = "HH:mm";
+            data.Value = time;
+            data.Value = day;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            SetMyCustomFormat();
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -25,15 +40,20 @@ namespace PRACA_NA_OCENE
 
         struct Dane
         {
-            string Imie;
-            string badanie;
-            DateTime Data;
+            public string Imie;
+            public string badanie;
+            public DateTime data;
         }
-        public void WypiszWartosci()
+
+        Dane = new Dane();
+        private void zatwierdz_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("Imie: {0}");
-            Console.WriteLine("badanie: {0}");
-            Console.WriteLine("Data: {0}");
+
+        }
+
+        private void przycisk_z_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
