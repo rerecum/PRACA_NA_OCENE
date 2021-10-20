@@ -10,12 +10,20 @@ using System.Windows.Forms;
 
 namespace PRACA_NA_OCENE
 {
+    public struct Dane
+    {
+        public string Imie;
+        public string badanie;
+        public DateTime data;
+    }
+
     public partial class Form1 : Form
     {
         public Form1()
         {
             InitializeComponent();
             SetMyCustomFormat();
+            numbers.Enqueue(osoba);
         }
 
         public void SetMyCustomFormat()
@@ -23,7 +31,7 @@ namespace PRACA_NA_OCENE
             DateTime time = DateTime.Now;
             DateTime day = DateTime.Today;
             data.Format = DateTimePickerFormat.Custom;
-            data.CustomFormat = "HH:mm";
+            data.CustomFormat = "dd:MM:yyyy";
             data.Value = time;
             data.Value = day;
         }
@@ -38,18 +46,15 @@ namespace PRACA_NA_OCENE
 
         }
 
-        struct Dane
-        {
-            public string Imie;
-            public string badanie;
-            public DateTime data;
-        }
-
-        Dane = new Dane();
+        Dane osoba = new Dane();
         private void zatwierdz_Click(object sender, EventArgs e)
         {
-
+            osoba.Imie = imie.Text;
+            osoba.badanie = badanie_textbox.Text;
+            osoba.data = data_badania.Value;
         }
+
+        Queue<Dane> numbers = new Queue<Dane>();
 
         private void przycisk_z_Click(object sender, EventArgs e)
         {

@@ -35,7 +35,7 @@ namespace PRACA_NA_OCENE
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.badanie_textbox = new System.Windows.Forms.TextBox();
             this.zatwierdz = new System.Windows.Forms.Label();
             this.przycisk_z = new System.Windows.Forms.Button();
             this.data = new System.Windows.Forms.DateTimePicker();
@@ -50,6 +50,7 @@ namespace PRACA_NA_OCENE
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.data_badania = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -93,12 +94,12 @@ namespace PRACA_NA_OCENE
             this.label2.TabIndex = 2;
             this.label2.Text = "imie";
             // 
-            // textBox1
+            // badanie_textbox
             // 
-            this.textBox1.Location = new System.Drawing.Point(94, 104);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 5;
+            this.badanie_textbox.Location = new System.Drawing.Point(94, 104);
+            this.badanie_textbox.Name = "badanie_textbox";
+            this.badanie_textbox.Size = new System.Drawing.Size(100, 20);
+            this.badanie_textbox.TabIndex = 5;
             // 
             // zatwierdz
             // 
@@ -129,7 +130,7 @@ namespace PRACA_NA_OCENE
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(39, 158);
+            this.label5.Location = new System.Drawing.Point(39, 184);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(45, 13);
             this.label5.TabIndex = 11;
@@ -145,9 +146,9 @@ namespace PRACA_NA_OCENE
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(39, 218);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
+            this.label6.Size = new System.Drawing.Size(13, 13);
             this.label6.TabIndex = 12;
-            this.label6.Text = "label6";
+            this.label6.Text = "1";
             // 
             // label7
             // 
@@ -172,9 +173,9 @@ namespace PRACA_NA_OCENE
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(107, 218);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(35, 13);
+            this.label9.Size = new System.Drawing.Size(13, 13);
             this.label9.TabIndex = 15;
-            this.label9.Text = "label9";
+            this.label9.Text = "2";
             // 
             // label10
             // 
@@ -221,11 +222,19 @@ namespace PRACA_NA_OCENE
             this.label14.TabIndex = 20;
             this.label14.Text = "label14";
             // 
+            // data_badania
+            // 
+            this.data_badania.Location = new System.Drawing.Point(90, 178);
+            this.data_badania.Name = "data_badania";
+            this.data_badania.Size = new System.Drawing.Size(200, 20);
+            this.data_badania.TabIndex = 21;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(341, 433);
+            this.Controls.Add(this.data_badania);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
@@ -239,7 +248,7 @@ namespace PRACA_NA_OCENE
             this.Controls.Add(this.data);
             this.Controls.Add(this.przycisk_z);
             this.Controls.Add(this.zatwierdz);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.badanie_textbox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -260,7 +269,7 @@ namespace PRACA_NA_OCENE
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox badanie_textbox;
         private System.Windows.Forms.Label zatwierdz;
         private System.Windows.Forms.Button przycisk_z;
         private System.Windows.Forms.DateTimePicker data;
@@ -275,6 +284,7 @@ namespace PRACA_NA_OCENE
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.DateTimePicker data_badania;
     }
 }
 
